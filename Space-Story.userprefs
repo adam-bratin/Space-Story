@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\moveToRocket.cs">
+    <Files>
+      <File FileName="Assets\crashShipEarth.cs" Line="13" Column="25" />
+      <File FileName="Assets\crashShipMoon.cs" Line="15" Column="25" />
+      <File FileName="Assets\displayCharacterInfo.cs" Line="7" Column="27" />
+      <File FileName="Assets\asteroidSpawn.cs" Line="101" Column="12" />
+      <File FileName="Assets\LeapFlyScript.js" Line="40" Column="30" />
+      <File FileName="Assets\launchRocket.cs" Line="1" Column="1" />
+      <File FileName="Assets\moveToRocket.cs" Line="37" Column="7" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

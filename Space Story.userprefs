@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\GitHub\Blockem-3D\Assets\finish.cs">
+    <Files>
+      <File FileName="..\GitHub\Blockem-3D\Assets\finish.cs" Line="24" Column="34" />
+      <File FileName="..\GitHub\Blockem-3D\Assets\Standard Assets\Character Controllers\Move.cs" Line="20" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
