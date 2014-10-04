@@ -50,10 +50,11 @@ public class asteroidControl : MonoBehaviour {
 			speed+=acceleration;
 		}
 		if(currentobj.transform.parent.transform.position.z<= earth.transform.position.z || currentobj.transform.parent.transform.position.z>=moon.transform.position.z){
-			det.Explode();
-			audio.Play();
-			currentobj.GetComponent<MeshRenderer>().enabled = false;
-			explode = true;
+			asteroidExplode();
+//			det.Explode();
+//			audio.Play();
+//			currentobj.GetComponent<MeshRenderer>().enabled = false;
+//			explode = true;
 		}
 		if(!audio.isPlaying && explode){
 			Destroy(currentobj.transform.parent.gameObject);
@@ -61,12 +62,12 @@ public class asteroidControl : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter(Collider col){
-		if(explode==false){
-			if(col.gameObject.name=="Ship"){
-				GameObject.Find("ship_body").SendMessage("loseHealth");
+		if (explode == false) {
+			if (col.gameObject.name == "Ship") {
+				GameObject.Find ("ship_body").SendMessage ("loseHealth");
 			}
+			asteroidExplode();
 		}
-		asteroidExplode();
 	}
 	
 	void asteroidExplode(){
