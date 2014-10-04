@@ -1,11 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/asteroidControl.cs">
+    <Files>
+      <File FileName="Assets/asteroidControl.cs" Line="67" Column="51" />
+      <File FileName="Assets/LeapFly.cs" Line="54" Column="29" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Assembly-CSharp" expanded="True">
-            <Node name="LeapFly.cs" selected="True" />
+            <Node name="asteroidControl.cs" selected="True" />
           </Node>
           <Node name="Assembly-UnityScript" expanded="True" />
         </State>
