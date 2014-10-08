@@ -1077,7 +1077,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4289724415
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 2138044696}
+  m_TargetTexture: {fileID: 854183950}
   m_HDR: 0
   m_OcclusionCulling: 1
 --- !u!1 &437943947
@@ -1290,7 +1290,7 @@ MonoBehaviour:
   planeNear: {fileID: 0}
   planeZero: {fileID: 0}
   planeFar: {fileID: 0}
-  horizontalFOV: 101.853798
+  horizontalFOV: 75.1781769
   verticalFOV: 60
   useCustomStereoLayer: 0
   stereoLayer: 0
@@ -1913,6 +1913,25 @@ Material:
         first:
           name: _TintColor
         second: {r: 1, g: 1, b: 1, a: 1}
+--- !u!84 &854183950
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_Width: 640
+  m_Height: 480
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_TextureSettings:
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapMode: 1
 --- !u!1 &855977891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,25 +2215,6 @@ EllipsoidParticleEmitter:
   m_OneShot: 0
   m_Ellipsoid: {x: 2, y: 0, z: 2}
   m_MinEmitterRange: 0
---- !u!84 &978425487
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_Width: 1280
-  m_Height: 600
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapMode: 1
 --- !u!21 &1036502398
 Material:
   serializedVersion: 3
@@ -2392,6 +2392,25 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!84 &1044870489
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_Width: 640
+  m_Height: 480
+  m_AntiAliasing: 1
+  m_DepthFormat: 2
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_TextureSettings:
+    m_FilterMode: 1
+    m_Aniso: 0
+    m_MipBias: 0
+    m_WrapMode: 1
 --- !u!1 &1098231368
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,7 +3171,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 4288675839
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 978425487}
+  m_TargetTexture: {fileID: 1044870489}
   m_HDR: 0
   m_OcclusionCulling: 1
 --- !u!4 &1728442642
@@ -4168,25 +4187,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceMult: 20
---- !u!84 &2138044696
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_Width: 1280
-  m_Height: 600
-  m_AntiAliasing: 1
-  m_DepthFormat: 2
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 0
-    m_MipBias: 0
-    m_WrapMode: 1
 --- !u!1001 &2147206368
 Prefab:
   m_ObjectHideFlags: 0
