@@ -30,8 +30,8 @@ public class asteroidSpawn : MonoBehaviour {
 	private GameObject moon;
 	private GameObject earth;
 	private Vector3 spawnlocation = new Vector3();
-	public float spawnTimeE = 3.0f;
-	public float spawnTimeM = 2.75f;
+	public float spawnTimeE = .75f;
+	public float spawnTimeM = 1.0f;
 	private float time;
 	private int asteroidNumber = 1;
 	private bool startSpawn = false;
@@ -74,7 +74,8 @@ public class asteroidSpawn : MonoBehaviour {
 					time+=spawnTimeM;
 				}
 				spawnlocation.x = Random.Range(ship.transform.position.x-200, ship.transform.position.x + 200);
-				spawnlocation.y = 0;
+				spawnlocation.y = Random.Range(ship.transform.position.y-200, ship.transform.position.y + 200);
+
 				GameObject newAsteroid = (GameObject)Instantiate(asteriod, spawnlocation, asteriod.transform.rotation /*Quaternion.identity*/);
 				newAsteroid.name = "Asteroid" + asteroidNumber;
 				asteroidNumber++;
