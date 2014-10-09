@@ -8,6 +8,7 @@ public class MovementControl : MonoBehaviour {
 	private const string decelerate = "decelerate";
 	private const string fireLaser = "fireLaser";
 	private const string fireTurret = "fireTurret";
+	private const string speedAxis = "shipSpeed";
 	private const string shipXAxis = "shipX";
 	private const string shipYAxis = "shipY";
 	private const string turretXAxis = "turretX";
@@ -37,16 +38,16 @@ public class MovementControl : MonoBehaviour {
 		yaw = Input.acceleration.x * 2.0;			// roll
 		roll = Input.acceleration.x * 2.0;		//
 		#else
-		if(Input.GetButtonDown(KeyCode.Joystick1Button0)) {
+		if(Input.GetButtonDown(fireLaser)) {
 			ship.SendMessage(fireLaser);
 		}
-		if (Input.GetButtonDown(KeyCode.Joystick1Button1)) {
+		if (Input.GetButtonDown(speedAxis)) {
 			ship.SendMessage(accelerate);
 		}
-		if (Input.GetButtonUp(KeyCode.Joystick1Button1)) {
+		if (Input.GetButtonUp(speedAxis)) {
 			ship.SendMessage(decelerate);
 		}
-		if (Input.GetButtonDown(KeyCode.Joystick2Button1)) {
+		if (Input.GetButtonDown(fireTurret)) {
 			ship.SendMessage(fireTurret);
 		}
 		float shipXAngle = Input.GetAxis(shipXAxis) * maxTurn;
@@ -57,5 +58,6 @@ public class MovementControl : MonoBehaviour {
 		ship.SendMessage(turnY, shipYAngle);
 		turret.SendMessage(turnX, turretXAngle);
 		turret.SendMessage(turnY, turretYAngle);
+		#endif
 	}
 }
