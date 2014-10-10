@@ -1,18 +1,18 @@
 using UnityEngine;
 using System.Collections;
 
-private float throttle = 0f; 
-private float xMove = 0f;	// x-axis orientation previously pitch
-private float yMove = 0f;	// y-axis orientation previously yaw
-private const float zMove = 60f;	// z-axis orientation previously roll
-private const float acceleration = .1f;
-private const float maxSpeed = 20;
-private bool accelerate = false; 
+
 
 
 public class joyFly : MonoBehaviour
 {
-
+	private float throttle = 0f; 
+	private float xMove = 0f;	// x-axis orientation previously pitch
+	private float yMove = 0f;	// y-axis orientation previously yaw
+	private const float zMove = 60f;	// z-axis orientation previously roll
+	private const float acceleration = .1f;
+	private const float maxSpeed = 20;
+	private bool accelerate = false; 
 	// Use this for initialization
 	void Start ()
 	{
