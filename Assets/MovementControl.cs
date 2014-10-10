@@ -17,7 +17,7 @@ public class MovementControl : MonoBehaviour {
 	private const string turretName = "gun TBS 001C";
 	private const string turnX = "turnX";
 	private const string turnY = "turnY";
-	private const int maxTurn = 40;
+	private const int maxTurn = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -39,25 +39,28 @@ public class MovementControl : MonoBehaviour {
 		roll = Input.acceleration.x * 2.0;		//
 		#else
 		if(Input.GetButtonDown(fireLaser)) {
+			Debug.Log("fireLaser");
 			ship.SendMessage(fireLaser);
 		}
 		if (Input.GetButtonDown(speedAxis)) {
+			Debug.Log("accelerate");
 			ship.SendMessage(accelerate);
 		}
 		if (Input.GetButtonUp(speedAxis)) {
+			Debug.Log("decelerate");
 			ship.SendMessage(decelerate);
 		}
 		if (Input.GetButtonDown(fireTurret)) {
-			ship.SendMessage(fireTurret);
+			//turret.SendMessage(fireTurret);
 		}
 		float shipXAngle = Input.GetAxis(shipXAxis) * maxTurn;
 		float shipYAngle = Input.GetAxis(shipYAxis) * maxTurn;
-		float turretXAngle = Input.GetAxis(turretXAxis) * maxTurn;
-		float turretYAngle = Input.GetAxis(turretYAxis) * maxTurn;
+		//float turretXAngle = Input.GetAxis(turretXAxis) * maxTurn;
+		//float turretYAngle = Input.GetAxis(turretYAxis) * maxTurn;
 		ship.SendMessage(turnX, shipXAngle);
 		ship.SendMessage(turnY, shipYAngle);
-		turret.SendMessage(turnX, turretXAngle);
-		turret.SendMessage(turnY, turretYAngle);
+		//turret.SendMessage(turnX, turretXAngle);
+		//turret.SendMessage(turnY, turretYAngle);
 		#endif
 	}
 }

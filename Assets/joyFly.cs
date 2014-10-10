@@ -3,12 +3,13 @@ using System.Collections;
 
 public class joyFly : MonoBehaviour
 {
-	private float throttle = 0f; 
+	public float throttle = 0f; 
 	private float xMove = 0f;	// x-axis orientation previously pitch
 	private float yMove = 0f;	// y-axis orientation previously yaw
-	private const float zMove = 60f;	// z-axis orientation previously roll
+	private const float zMove = .1f;	// z-axis orientation previously roll
 	private const float acceleration = .1f;
 	private const float maxSpeed = 20;
+	private const int maxZRot = 60;
 	private bool celerate = false; 
 	// Use this for initialization
 	void Start ()
@@ -28,7 +29,7 @@ public class joyFly : MonoBehaviour
 		}
 		else
 		{
-			if(acceleration - throttle > 0)
+			if(throttle - acceleration > 0)
 			{
 				throttle-=acceleration;
 			}
@@ -40,11 +41,15 @@ public class joyFly : MonoBehaviour
 		rot.y += yMove * .90f;
 		if(xMove > 0)
 		{
-			rot.z = zMove;
+			if(rot.z < maxZRot && rot.z > -1*maxZRot) {
+				rot.z +=zMove;
+			}
 		}
-		else
+		else if(xMove < 0) 
 		{
-			rot.z = -zMove;
+			if(rot.z < maxZRot && rot.z > -1*maxZRot) {
+				rot.z = -zMove;
+			}
 		}
 		transform.parent.eulerAngles = rot;
 	}
