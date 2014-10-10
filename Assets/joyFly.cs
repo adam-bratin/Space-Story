@@ -1,8 +1,5 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
-
-
-
 
 public class joyFly : MonoBehaviour
 {
@@ -12,32 +9,32 @@ public class joyFly : MonoBehaviour
 	private const float zMove = 60f;	// z-axis orientation previously roll
 	private const float acceleration = .1f;
 	private const float maxSpeed = 20;
-	private bool accelerate = false; 
+	private bool celerate = false; 
 	// Use this for initialization
 	void Start ()
 	{
-	
+		
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if(accelerate)
+		if(celerate)
 		{
-			if(acceleration + speed < maxSpeed)
+			if(acceleration + throttle < maxSpeed)
 			{
 				throttle+=acceleration;
 			}	
 		}
 		else
 		{
-			if(acceleration - speed > 0)
+			if(acceleration - throttle > 0)
 			{
 				throttle-=acceleration;
 			}
 		}
-
-		transform.parent.rigidbody.velocity = transform.parent.forward * -throttle * forceMult;
+		
+		transform.parent.rigidbody.velocity = transform.parent.forward * -throttle;
 		Vector3 rot = transform.parent.localRotation.eulerAngles;
 		rot.x += xMove * .90f;
 		rot.y += yMove * .90f;
@@ -53,26 +50,26 @@ public class joyFly : MonoBehaviour
 	}
 	void fireLaser ()
 	{
-		ship.SendMessage("shootLaser");
-
+		gameObject.SendMessage("shootLaser");
+		
 	}
 	void accelerate ()
 	{
-		accelerate = true;
-
+		celerate = true;
+		
 	}
 	void decelerate ()
 	{
-		accelerte = false; 
-
+		celerate = false; 
+		
 	}
 	void turnX (double angleX)
 	{
-			yMove+=angleX;
+		yMove+= (float) angleX;
 	}
 	void turnY (double angleY)
 	{
-			xMove+=angleY;
+		xMove+= (float) angleY;
 	}
 	//instead of roll, pitch and yaw make them in terms of x and y. 
 	// in turnx and turny we will want to switch ^these values. 
