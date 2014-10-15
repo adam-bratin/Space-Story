@@ -8,10 +8,10 @@ public class joyFly : MonoBehaviour
 	private float yMove = 0f;    // y-axis orientation previously yaw
 	private const float zMove = .1f;    // z-axis orientation previously roll
 	private float acceleration = 0f;
-	private const float maxSpeed = 20;
+	private const float maxSpeed = 15;
 	private const float minSpeed = 0;
-	private const float maxAccel = 1;
-	private const float maxTurn = 1;
+	private const float maxAccel = 2;
+	private const float maxTurn = .1f;
 	private const int maxZRot = 60;
 	// Use this for initialization
 	void Start ()
@@ -32,18 +32,18 @@ public class joyFly : MonoBehaviour
 		Vector3 rot = transform.parent.localRotation.eulerAngles;
 		rot.x += xMove * .90f;
 		rot.y += yMove * .90f;
-		if(xMove > 0)
-		{
-			if(rot.z < maxZRot && rot.z > -1*maxZRot) {
-				rot.z +=zMove;
-			}
-		}
-		else if(xMove < 0) 
-		{
-			if(rot.z < maxZRot && rot.z > -1*maxZRot) {
-				rot.z = -zMove;
-			}
-		}
+//		if(xMove > 0)
+//		{
+//			if(rot.z < maxZRot && rot.z > -1*maxZRot) {
+//				rot.z +=zMove;
+//			}
+//		}
+//		else if(xMove < 0) 
+//		{
+//			if(rot.z < maxZRot && rot.z > -1*maxZRot) {
+//				rot.z = -zMove;
+//			}
+//		}
 		transform.parent.eulerAngles = rot;
 	}
 	void fireLaser ()

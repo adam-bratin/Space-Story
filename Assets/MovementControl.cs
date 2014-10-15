@@ -36,10 +36,11 @@ public class MovementControl : MonoBehaviour {
 		float shipYAngle = Input.GetAxis(shipYAxis);
 
 		ship.SendMessage(turnX, shipXAngle);
-		ship.SendMessage(turnY, shipYAngle);
+		//ship.SendMessage(turnY, shipYAngle);
 
-		float acceleration = Input.GetAxis (accelerate);
-		ship.SendMessage (accelerate, acceleration);
+		float acceleration = Input.GetAxis (speedAxis);
+		Debug.Log ("Acceleration: " + acceleration);
+		ship.SendMessage (accelerate, -1 * acceleration);
 
 		//float turretXAngle = Input.GetAxis(turretXAxis) * maxTurn;
 		//float turretYAngle = Input.GetAxis(turretYAxis) * maxTurn;
