@@ -4,13 +4,15 @@ using System.Collections;
 public class joyFly : MonoBehaviour
 {
 	public float throttle = 0f; 
-	private float xMove = 0f;	// x-axis orientation previously pitch
-	private float yMove = 0f;	// y-axis orientation previously yaw
-	private const float zMove = .1f;	// z-axis orientation previously roll
-	private const float acceleration = .1f;
+	private float xMove = 0f;    // x-axis orientation previously pitch
+	private float yMove = 0f;    // y-axis orientation previously yaw
+	private const float zMove = .1f;    // z-axis orientation previously roll
+	private float acceleration = 0f;
 	private const float maxSpeed = 20;
+	private const float minSpeed = 0;
+	private const float maxAccel = 1;
+	private const float maxTurn = 1;
 	private const int maxZRot = 60;
-	private bool celerate = false; 
 	// Use this for initialization
 	void Start ()
 	{
@@ -20,20 +22,11 @@ public class joyFly : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if(celerate)
+		
+		if((acceleration + throttle < maxSpeed) && (acceleration + throttle >= minSpeed))
 		{
-			if(acceleration + throttle < maxSpeed)
-			{
-				throttle+=acceleration;
-			}	
-		}
-		else
-		{
-			if(throttle - acceleration > 0)
-			{
-				throttle-=acceleration;
-			}
-		}
+			throttle+=acceleration;
+		}    
 		
 		transform.parent.rigidbody.velocity = transform.parent.forward * -throttle;
 		Vector3 rot = transform.parent.localRotation.eulerAngles;
@@ -55,28 +48,23 @@ public class joyFly : MonoBehaviour
 	}
 	void fireLaser ()
 	{
-		gameObject.SendMessage("shootLaser");
-		
+		gameObject.SendMessage("shootLaser");        
 	}
-	void accelerate ()
+	
+	void accelerate (float speedVal)
 	{
-		celerate = true;
-		
+		acceleration = speedVal * maxAccel;
 	}
-	void decelerate ()
+	
+	void turnX (float angleX)
 	{
-		celerate = false; 
-		
+		yMove=angleX * maxTurn;
 	}
-	void turnX (double angleX)
+	
+	void turnY (float angleY)
 	{
-		yMove+= (float) angleX;
-	}
-	void turnY (double angleY)
-	{
-		xMove+= (float) angleY;
+		xMove=angleY * maxTurn;
 	}
 	//instead of roll, pitch and yaw make them in terms of x and y. 
 	// in turnx and turny we will want to switch ^these values. 
 }
-
