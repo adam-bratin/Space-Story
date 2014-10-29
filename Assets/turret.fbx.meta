@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: f079334c300c946f3b936294fd5189cd
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Camera
+    100002: ground plane
+    100004: GUN base
+    100006: Horizontal dial
+    100008: human referance
+    100010: Light cold fill
+    100012: Light warm fill
+    100014: Mesh.008
+    100016: Plane.000
+    100018: Plane.001
+    100020: SC ACU left
+    100022: SC ACU Right
+    100024: SC EXT CEllarray
+    100026: SC external INTF
+    100028: SC GUN energy line
+    100030: SC TIBLIS Pulse Cannon
+    100032: //RootNode
+    100034: Vertical Dial
+    400000: Camera
+    400002: ground plane
+    400004: GUN base
+    400006: Horizontal dial
+    400008: human referance
+    400010: Light cold fill
+    400012: Light warm fill
+    400014: Mesh.008
+    400016: Plane.000
+    400018: Plane.001
+    400020: SC ACU left
+    400022: SC ACU Right
+    400024: SC EXT CEllarray
+    400026: SC external INTF
+    400028: SC GUN energy line
+    400030: SC TIBLIS Pulse Cannon
+    400032: //RootNode
+    400034: Vertical Dial
+    2300000: ground plane
+    2300002: GUN base
+    2300004: Horizontal dial
+    2300006: human referance
+    2300008: Light cold fill
+    2300010: Light warm fill
+    2300012: Mesh.008
+    2300014: Plane.000
+    2300016: Plane.001
+    2300018: SC ACU left
+    2300020: SC ACU Right
+    2300022: SC EXT CEllarray
+    2300024: SC external INTF
+    2300026: SC GUN energy line
+    2300028: SC TIBLIS Pulse Cannon
+    2300030: Vertical Dial
+    3300000: ground plane
+    3300002: GUN base
+    3300004: Horizontal dial
+    3300006: human referance
+    3300008: Light cold fill
+    3300010: Light warm fill
+    3300012: Mesh.008
+    3300014: Plane.000
+    3300016: Plane.001
+    3300018: SC ACU left
+    3300020: SC ACU Right
+    3300022: SC EXT CEllarray
+    3300024: SC external INTF
+    3300026: SC GUN energy line
+    3300028: SC TIBLIS Pulse Cannon
+    3300030: Vertical Dial
+    4300000: GUN base
+    4300002: Horizontal dial
+    4300004: SC external INTF
+    4300006: SC EXT CEllarray
+    4300008: Vertical Dial
+    4300010: SC GUN energy line
+    4300012: SC TIBLIS Pulse Cannon
+    4300014: SC ACU Right
+    4300016: SC ACU left
+    4300020: ground plane
+    4300022: human referance
+    4300024: Light cold fill
+    4300026: Light warm fill
+    4300028: Plane.000
+    4300030: Plane.001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

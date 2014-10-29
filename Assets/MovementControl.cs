@@ -13,7 +13,7 @@ public class MovementControl : MonoBehaviour {
 	private const string turretXAxis = "turretX";
 	private const string turretYAxis = "turretY";
 	private const string shipName = "SciFi_Fighter_MK";
-	private const string turretName = "gun TBS 001C";
+	private const string turretName = "Turret";
 	private const string turnX = "turnX";
 	private const string turnY = "turnY";
 
@@ -26,12 +26,10 @@ public class MovementControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetButtonDown(fireLaser)) {
+			Debug.Log("fire Laser \n");
 			ship.SendMessage(fireLaser);
 		}
 
-		if (Input.GetButtonDown(fireTurret)) {
-			//turret.SendMessage(fireTurret);
-		}
 		float shipXAngle = Input.GetAxis(shipXAxis);
 		float shipYAngle = Input.GetAxis(shipYAxis);
 
@@ -42,9 +40,14 @@ public class MovementControl : MonoBehaviour {
 		Debug.Log ("Acceleration: " + acceleration);
 		ship.SendMessage (accelerate, -1 * acceleration);
 
-		//float turretXAngle = Input.GetAxis(turretXAxis) * maxTurn;
-		//float turretYAngle = Input.GetAxis(turretYAxis) * maxTurn;
-		//turret.SendMessage(turnX, turretXAngle);
+		if (Input.GetButtonDown(fireTurret)) {
+			turret.SendMessage(fireTurret);
+		}
+		
+		float turretXAngle = Input.GetAxis(turretXAxis);
+		float turretYAngle = Input.GetAxis(turretYAxis);
+		turret.SendMessage(turnX, turretXAngle);
 		//turret.SendMessage(turnY, turretYAngle);
+
 	}
 }
